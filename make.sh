@@ -65,7 +65,7 @@ print "New kernel Image found, copying to workspace..." yellow
 cp Image ../work/kernel
 fi
 
-if [[ "-e ../*dtb" ]]
+if [ -e ../*dtb ]
 then
 	for i in ../*dtb
 	do
@@ -78,7 +78,7 @@ then
 	done
 fi
 
-if [ "-e *dtb" ]
+if [ -e *dtb ]
 then
 	cat *dtb > ../work/dtb
 fi
